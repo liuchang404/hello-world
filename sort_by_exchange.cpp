@@ -1,19 +1,28 @@
-//交换排序
 #include <stdio.h>
 int main() {
-  int x[3] = {5, 2, 1}, i;
-  while(1) {
-    scanf("%d %d %d", &x[0], &x[1], &x[2]);
-    for(i=0;i<2;i++) {
-      if( x[i] > x[i+1]) {
-  	    int temp = x[i];
-  	    x[i] = x[i+1];
-  	    x[i+1] = temp;
-      }
-      i = i + 1;
-      i = i - 1;
-    }
-    printf(" %d, %d, %d", x[0], x[1], x[2]);
-  }
-  return 0;
+  int x[100],i,j,k,m,n;
+  int temp;
+  scanf("%d",&m);//m<100
+  for(i=0;i<m;i++){//
+  scanf("%d",&n);
+  x[i]=n;
 }
+  for(j=0;j<m;j++)
+  	for(k=0;k<m-1-j;k++){
+  	if (x[k]>x[k+1]){
+  	temp=x[k];
+  	x[k]=x[k+1];
+  	x[k+1]=temp;
+  }
+  }
+   for(i=0;i<m;i++){
+   	printf("%d",x[i]);
+   }  
+   return 0;
+}
+      
+
+
+
+
+

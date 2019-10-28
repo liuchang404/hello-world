@@ -1,3 +1,22 @@
-//小明有 5 张数字卡片，上面分别为数字 1， 2， 3， 6， 9。小明想用这 5 张数字卡片组成一个最大的 5 位
-//数，这个五位数是_______。
-//编程：任意输入5个数字，将它们组合为最大的5位数输出。
+#include <stdio.h>
+int main() {
+  int x[100],i,j,k,m,n;
+  int temp;
+  scanf("%d",&m);
+  for(i=0;i<m;i++){
+  scanf("%d",&n);
+  x[i]=n;
+}
+  for(j=0;j<m-1;j++)
+  	for(k=0;k<m-1-j;k++){
+  	if (x[k]<x[k+1]){
+  	temp=x[k];
+  	x[k]=x[k+1];
+  	x[k+1]=temp;
+  }
+  }
+   for(i=0;i<m;i++){
+   	printf("%d",x[i]);
+   }  
+   return 0;
+}
