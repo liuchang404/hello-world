@@ -9,10 +9,11 @@ int main() {
 }
   for(j=0;j<m-1;j++)
   	for(k=0;k<m-1-j;k++){
-  	if (x[k]<x[k+1]){
-  	temp=x[k];
-  	x[k]=x[k+1];
-  	x[k+1]=temp;
+  	if(x[k]>x[k+1]){
+  		temp=x[k];
+  		x[k]=x[k+1];
+  		x[k+1]=temp;
+	  }
   }
   }
    for(i=0;i<m;i++){
