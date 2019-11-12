@@ -49,5 +49,10 @@ int main()
 					break;
 		}
     }
+    if (m<10000){
+    	printf("ERROR");
+	} 
+	else{
     printf("%d",m);
+}
  }
